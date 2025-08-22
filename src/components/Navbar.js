@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function Navbar() {
-  const pathname = usePathname(); // for active link
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
@@ -16,14 +16,16 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-      <nav className="container mx-auto flex justify-between items-center px-6 py-4">
+      <nav className="max-w-7xl mx-auto flex items-center justify-between px-8 md:px-12 py-4">
         {/* Left: Site Name */}
-        <Link href="/" className="text-2xl font-bold text-black">
-          Daily News
-        </Link>
+        <div className="flex-shrink-0">
+          <Link href="/" className="text-2xl font-bold text-black">
+            Daily News
+          </Link>
+        </div>
 
-        {/* Center: Links (hidden on mobile) */}
-        <ul className="hidden md:flex space-x-8">
+        {/* Center: Links */}
+        <ul className="hidden md:flex flex-1 justify-center space-x-8">
           {links.map((link) => (
             <li key={link.href}>
               <Link
@@ -38,8 +40,8 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Right: Login Button */}
-        <div className="hidden md:block">
+        {/* Right: Login */}
+        <div className="hidden md:flex flex-shrink-0">
           <Link
             href="/login"
             className="px-5 py-2 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition"
@@ -59,7 +61,6 @@ export default function Navbar() {
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
             >
               {menuOpen ? (
                 <path
@@ -67,14 +68,14 @@ export default function Navbar() {
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M6 18L18 6M6 6l12 12"
-                ></path>
+                />
               ) : (
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M4 6h16M4 12h16M4 18h16"
-                ></path>
+                />
               )}
             </svg>
           </button>
