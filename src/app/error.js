@@ -36,13 +36,13 @@ export default function Error({ error, reset }) {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={() => reset()}
-            className="px-6 py-3 bg-gray-900 text-white font-medium rounded-sm hover:bg-gray-800 transition-colors"
+            className="px-6 py-3 cursor-pointer bg-gray-900 text-white font-medium rounded-sm hover:bg-gray-800 transition-colors"
           >
             Try Again
           </button>
           <button
             onClick={() => window.location.reload()}
-            className="px-6 py-3 bg-white text-gray-900 font-medium border border-gray-300 rounded-sm hover:bg-gray-50 transition-colors"
+            className="px-6 py-3 cursor-pointer bg-white text-gray-900 font-medium border border-gray-300 rounded-sm hover:bg-gray-50 transition-colors"
           >
             Reload Page
           </button>
