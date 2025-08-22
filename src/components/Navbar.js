@@ -9,6 +9,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
+    { name: "Home", href: "/" },
     { name: "News", href: "/news" },
     { name: "About Us", href: "/about" },
   ];
