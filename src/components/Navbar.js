@@ -11,6 +11,7 @@ export default function Navbar() {
   const links = [
     { name: "Home", href: "/" },
     { name: "News", href: "/news" },
+    { name: "Add News", href: "/add-news" },
     { name: "About Us", href: "/about" },
   ];
 
