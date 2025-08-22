@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Loading from "../loading";
 
 export default function NewsPage() {
   const [news, setNews] = useState([]);
@@ -37,18 +38,11 @@ export default function NewsPage() {
       : news.filter((item) => item.category === selectedCategory);
 
   if (loading) {
-    return (
-      <div className="min-h-screen  bg-white text-black flex items-center justify-center">
-        <div className="flex flex-col items-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-black mb-4"></div>
-          <p className="text-lg">Loading news...</p>
-        </div>
-      </div>
-    );
+    return <Loading />;
   }
 
   return (
-    <div className="min-h-screen bg-white text-black p-4 md:p-8">
+    <div className="min-h-screen mt-16 bg-white text-black p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="mb-12 text-center">
