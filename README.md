@@ -57,12 +57,13 @@ Daily-News/
 ├─ utils/                  # Helper functions and API calls
 ├─ package.json
 └─ README.md
+```
 
+## 👤 Developed By
 
-👤 Developed By
 Touhid Tamim
 WEB11-3318 | Programming Hero Web Development Course (Batch 11)
 
-📝 License
+## 🧪 Local Installation Guide📝 License
+
 This project is for educational purposes only. All rights reserved by the developer.
-```
